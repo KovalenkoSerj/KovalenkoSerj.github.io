@@ -1,0 +1,88 @@
+$primary: #00c8ff;
+$primary-text: #b2b2b2;
+$secondary-text: #c2c2c2;
+$footer-background: #f7f7f7;
+
+.container {
+  width: 1198px;
+  margin: auto;
+}
+
+@mixin button {
+  width: 100px;
+  height: 24px;
+  border: none;
+  border-radius: 5px;
+  background-color: $primary;
+  @include abel();
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background: #fff;
+    color: $primary;
+    transition: 0.5s;
+  }
+}
+
+@mixin title-before-after {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  white-space: pre;
+  @include abel();
+  font-size: 20px;
+  color: $secondary-text;
+  &::before {
+    content: "";
+    width: 20%;
+    height: 1px;
+    display: flex;
+    background-color: $secondary-text;
+    margin-right: 20px;
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    display: flex;
+    height: 1px;
+    background-color: $secondary-text;
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 820px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 570px;
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 414px) {
+  .container {
+    width: 320px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 220px;
+  }
+}

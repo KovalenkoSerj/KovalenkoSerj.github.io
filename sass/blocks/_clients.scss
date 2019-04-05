@@ -1,0 +1,42 @@
+.clients {
+  &-title {
+    @include title-before-after();
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 120px;
+    flex: 25%;
+    &:hover &-link {
+      fill: black;
+      transition: 0.5s;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .clients {
+    &__item {
+      flex: 30%;
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .clients {
+    &__item {
+      flex: 100%;
+    }
+  }
+}
