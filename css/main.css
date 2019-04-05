@@ -216,6 +216,10 @@
   transition: 0.5s;
 }
 
+.header-logo {
+  cursor: pointer;
+}
+
 @media (max-width: 991px) {
   .header {
     margin-bottom: 50px;

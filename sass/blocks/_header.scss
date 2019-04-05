@@ -88,6 +88,9 @@
       height: 60px;
     }
   }
+  &-logo {
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 991px) {
