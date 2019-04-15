@@ -12,30 +12,32 @@
     align-items: flex-start;
   }
   &__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
+    &-link {
+      text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+    }
     &-text {
       display: flex;
       flex-direction: column;
       justify-content: center;
       width: 275px;
       @include abel();
-    }
-    &-title {
-      color: #000000;
-    }
-    &-link {
-      text-decoration: none;
+      color: $primary-text;
     }
     &-img {
       width: 150px;
+      height: 60px;
       display: flex;
       justify-content: center;
     }
     &-description {
       color: $primary-text;
+    }
+    &-title {
+      color: #000000;
     }
   }
 }
